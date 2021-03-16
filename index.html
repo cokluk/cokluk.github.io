@@ -6,8 +6,15 @@
 var myHeaders = new Headers();
 myHeaders.append('Content-Type', 'image/jpeg');
  
+var myInit = {
+  method: 'GET',
+  headers: myHeaders,
+  mode: 'cors',
+  cache: 'default'
+};
 
-alert(myHeaders);
+
+alert(myInit);
 
 </script>
 
