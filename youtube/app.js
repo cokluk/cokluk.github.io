@@ -198,3 +198,22 @@ function vazgec() { $(".uguroynat").html(" ");  $(".uguroynat").css("display","n
 function randomChoice(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
+
+
+	
+	function ara(){
+		$("#yt").css("display","none");
+		$("#arax").css("display","none");
+		$("#arax2").css("display","block");
+		$("#searchTxt").css("display","block");
+		
+	}
+	
+	function kapa(){
+	    $("#yt").css("display","block");
+		$("#arax").css("display","block");
+		$("#arax2").css("display","none");
+		$("#searchTxt").css("display","none");
+	}
+	
+	
