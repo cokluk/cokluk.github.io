@@ -10,7 +10,9 @@ $(document).ready(function(){
 		const $results = $("#results");
 		const $searchBtn = $("#searchBtn");
 		const youtubeURL = "https://www.googleapis.com/youtube/v3/search";
-		const $collection = $(".collection");
+		const $collection = $(".collection"); 
+		const ApiDatastore = [ "AIzaSyAq-6L3AEKpVdswOgdAGMAtC93IbVqeV3g", "AIzaSyCkcGCPkvj_2YdFHRF1oHEYFnvZ7y3EcW8" ];
+		const ApiSelect = randomChoice(ApiDatastore);
 
  
 		$searchBtn.on("click", function(){
@@ -190,3 +192,9 @@ function toSeoUrl(url) {
  
 
 function vazgec() { $(".uguroynat").html(" ");  $(".uguroynat").css("display","none"); $("body").css("overflow","unset");    }
+
+
+//https://gist.github.com/c0derabbit/9ad0c77f2713de58fa1c4c0e74199d33
+function randomChoice(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
