@@ -11,7 +11,7 @@ $(document).ready(function(){
 		const $searchBtn = $("#searchBtn");
 		const youtubeURL = "https://www.googleapis.com/youtube/v3/search";
 		const $collection = $(".collection"); 
-		const ApiDatastore = [ "AIzaSyAq-6L3AEKpVdswOgdAGMAtC93IbVqeV3g", "AIzaSyCkcGCPkvj_2YdFHRF1oHEYFnvZ7y3EcW8" ];
+		const ApiDatastore = [ "AIzaSyAq-6L3AEKpVdswOgdAGMAtC93IbVqeV3g", "AIzaSyCkcGCPkvj_2YdFHRF1oHEYFnvZ7y3EcW8" , "AIzaSyAJe_h5NLZi4w4whlm-Zl2mWP76Z-FA2nA" ];
 		const ApiSelect = randomChoice(ApiDatastore);
 
  
