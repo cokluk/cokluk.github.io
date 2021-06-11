@@ -152,17 +152,12 @@ function oynat(x, y, z, h, v) {
  
 var Element = `
 <br>
-<center><img style="width:30%;" id="yt" src="yt.png" /></center>
-<iframe width="200" style="border:none;" src="https://www.youtube.com/embed/${x}?autoplay=1" allow='autoplay'></iframe>
+<center><img style="width:30%;" id="yt" src="ytw.png" /></center>
+<iframe  id="ytframe" style="width:200px;border:none;margin-top: 100px;" src="https://www.youtube.com/embed/${x}?autoplay=1" allow='autoplay'></iframe>
 
-<h1>${y}</h1>
-<hr>
-<p>${h}</p>
-<br>
-<span>${z} Kanalı tarafından, ${v} Tarihinde yüklenmiştir.</span>
-
-
-<a onclick="vazgec()">İzlemeyi bırak</a>
+ 
+<a id="i_2" onclick="tamEkran()">Tam ekran</a>
+<a id="i_1" onclick="vazgec()">İzlemeyi bırak</a>
 
 `;
 
@@ -214,6 +209,14 @@ function randomChoice(arr) {
 		$("#arax").css("display","block");
 		$("#arax2").css("display","none");
 		$("#searchTxt").css("display","none");
+		 $.post("http://qb-phone/TamEkranKapat", JSON.stringify({ }));  
 	}
 	
 	
+	function tamEkran(){
+		
+		$("#ytframe").css({"transform":"rotate(90deg)","height":"200px","width":"200px" });
+        $.post("http://qb-phone/TamEkranGecis", JSON.stringify({ }));  
+ 
+	}
+ 

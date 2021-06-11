@@ -31,11 +31,11 @@ body{
 .uguroynat {
 	display:none;
 	position: fixed;
-    top: 0vh;
-    background: white;
-    width: -webkit-fill-available;
-    height: 450px;
-    left: 0;
+	top: 0vh;
+	background: black;
+	width: -webkit-fill-available;
+	height: 450px;
+	left: 0;
 }
 
 
@@ -67,8 +67,8 @@ body{
     text-align: center;
     width: -webkit-fill-available;
     margin-top: 10px;
-    background: #efefef;
-    color: black;
+    background: #484848;
+    color: #b3b3b3;
     padding-top: 5px;
     padding-bottom: 5px;
 }
