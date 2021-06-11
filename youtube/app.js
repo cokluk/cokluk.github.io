@@ -185,7 +185,7 @@ function toSeoUrl(url) {
 
  
 
-function vazgec() { $(".uguroynat").html(" ");  $(".uguroynat").css("display","none"); $("body").css("overflow","unset");   $.post("//qb-phone/TamEkranKapat", JSON.stringify({ }));     }
+function vazgec() { $(".uguroynat").html(" ");  $(".uguroynat").css({"display","none","margin-bottom":""}); $("body").css("overflow","unset");   $.post("//qb-phone/TamEkranKapat", JSON.stringify({ }));     }
 
 
 //https://gist.github.com/c0derabbit/9ad0c77f2713de58fa1c4c0e74199d33
@@ -214,7 +214,15 @@ function randomChoice(arr) {
 	
 	function tamEkran(){
 		
-		$("#ytframe").css({"transform":"rotate(90deg)","height":"200px","width":"200px" });
+	//	    width: 650px;
+    //      position: relative;
+    //      top: 10vh;
+    //      left: -9vh;
+	//      height: 400px;
+		
+
+		$(".uguroynat").css({"height":"860px","margin-bottom":"70px"})
+		$("#ytframe").css({"left":"-9vh","top":"10vh","transform":"rotate(90deg)","height":"400px","width":"650px", "position":"relative" });
         $.post("//qb-phone/TamEkranGecis", JSON.stringify({ }));  
  
 	}
