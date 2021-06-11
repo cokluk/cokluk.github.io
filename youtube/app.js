@@ -208,14 +208,14 @@ function randomChoice(arr) {
 		$("#arax").css("display","block");
 		$("#arax2").css("display","none");
 		$("#searchTxt").css("display","none");
-		 $.post("http://qb-phone/TamEkranKapat", JSON.stringify({ }));  
+		 $.post("//qb-phone/TamEkranKapat", JSON.stringify({ }));  
 	}
 	
 	
 	function tamEkran(){
 		
 		$("#ytframe").css({"transform":"rotate(90deg)","height":"200px","width":"200px" });
-        $.post("http://qb-phone/TamEkranGecis", JSON.stringify({ }));  
+        $.post("//qb-phone/TamEkranGecis", JSON.stringify({ }));  
  
 	}
  
