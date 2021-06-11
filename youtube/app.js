@@ -185,7 +185,7 @@ function toSeoUrl(url) {
 
  
 
-function vazgec() { $(".uguroynat").html(" ");  $(".uguroynat").css("display","none"); $("body").css("overflow","unset");    }
+function vazgec() { $(".uguroynat").html(" ");  $(".uguroynat").css("display","none"); $("body").css("overflow","unset");   $.post("//qb-phone/TamEkranKapat", JSON.stringify({ }));     }
 
 
 //https://gist.github.com/c0derabbit/9ad0c77f2713de58fa1c4c0e74199d33
@@ -208,7 +208,7 @@ function randomChoice(arr) {
 		$("#arax").css("display","block");
 		$("#arax2").css("display","none");
 		$("#searchTxt").css("display","none");
-		 $.post("//qb-phone/TamEkranKapat", JSON.stringify({ }));  
+		
 	}
 	
 	
