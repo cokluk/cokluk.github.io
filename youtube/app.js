@@ -154,7 +154,7 @@ var Element = `
 <br>
 <center><img style="width:30%;" id="yt" src="ytw.png" /></center>
 <a id="i_2" onclick="tamEkran()">Tam ekran</a>
-<iframe  id="ytframe" style="width:200px;border:none;margin-top: 100px;" src="https://www.youtube.com/embed/${x}?autoplay=1" allow='autoplay'></iframe>
+<iframe  id="ytframe" style="width:200px;border:none;margin-top: 10px;" src="https://www.youtube.com/embed/${x}?autoplay=1" allow='autoplay'></iframe>
  
 <a id="i_1" onclick="vazgec()">İzlemeyi bırak</a>
 
