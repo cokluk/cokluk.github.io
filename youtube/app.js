@@ -166,7 +166,7 @@ $(".uguroynat").css("display","block");
 
 $("body").css("overflow","hidden"); 
 
-
+$.post("//qb-phone/BildirimManager", JSON.stringify({ tip:"yt" , title: y , durum: "acik" }));  
 
 }
 
@@ -185,7 +185,14 @@ function toSeoUrl(url) {
 
  
 
-function vazgec() { $(".uguroynat").html(" ");  $(".uguroynat a").css({"position":"","bottom":""}); $(".uguroynat").css({"display":"none","margin-bottom":""}); $("body").css("overflow","unset");   $.post("//qb-phone/TamEkranKapat", JSON.stringify({ }));     }
+function vazgec() {
+
+
+$.post("//qb-phone/BildirimManager", JSON.stringify({ tip:"yt" ,  durum: "kapali" }));  
+	$(".uguroynat").html(" ");  $(".uguroynat a").css({"position":"","bottom":""}); $(".uguroynat").css({"display":"none","margin-bottom":""}); $("body").css("overflow","unset");   $.post("//qb-phone/TamEkranKapat", JSON.stringify({ })); 
+
+
+}
 
 
 //https://gist.github.com/c0derabbit/9ad0c77f2713de58fa1c4c0e74199d33
