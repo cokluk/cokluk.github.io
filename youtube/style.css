@@ -144,3 +144,13 @@ h - 180
 .title{
 	font-size: 11px;
 }
+
+
+@media only screen and (min-height: 1000px) {
+	
+.image {
+    position: absolute;
+    width: 180px;
+}
+
+}
