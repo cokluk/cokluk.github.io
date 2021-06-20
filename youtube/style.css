@@ -146,11 +146,13 @@ h - 180
 }
 
 
-@media only screen and (min-height: 1000px) {
+@media only screen and (min-height: 300px) {
 	
 .image {
-    position: absolute;
-    width: 180px;
+     
+width: 269px!important;
+     
+height: 146px;
 }
 
 }
