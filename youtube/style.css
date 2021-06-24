@@ -156,7 +156,7 @@ height: 146px;
 }
 
 .uguroynat {
-	height: 520px!important;
+	height: -webkit-fill-available!important;
 }
 
 
