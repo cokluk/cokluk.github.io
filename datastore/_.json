@@ -1,0 +1,14 @@
+{
+  "CO-TR-TEST": {
+    "lisans": "True",
+    "sahip": "Bilinmiyor",
+    "tahsis_ip": "127.0.0.1",
+    "tahsis_sunucu": "localhost"
+  },
+  "CO-TR-192": {
+    "lisans": "True",
+    "sahip": "Bilinmiyor",
+    "tahsis_ip": "192.168.1.1",
+    "tahsis_sunucu": "192"
+  }
+}
