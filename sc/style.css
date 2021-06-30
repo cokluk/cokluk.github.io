@@ -1,0 +1,99 @@
+body{font-family:roboto;font-size:18px;color:#333;margin:0;padding:0;height: 100%;background-repeat: no-repeat;background-attachment: fixed;background: linear-gradient(-45deg, #000000, #5d5b5c, #000000, #717171);background-size: 400% 400%;animation: gradient 15s ease infinite;}.wrapper{}.searchForm{margin:0 auto;text-align:center;}button{border:2px solid #f70;background:0 0;padding:10px;color:#f70;border-radius:2px}button:hover{color:#fcfcfc;border:2px solid #f70;background:#f70}.searchBox{width: -webkit-fill-available;padding: 5px;border: 2px solid gray;margin-left: 5px;margin-right: 5px;color: white;font-family: 'GothamBook';backdrop-filter: blur(5px);background: unset;}.logo{margin:0 auto;padding:10px;color: #4caf50;text-align:center;}.logo img{padding-left:30px}.text-center{text-align:center}.playerContainer{margin:0 auto;text-align:center}.loader{text-align:center}.list-inline{padding-left:0;margin-left:-5px;list-style:none;font-size:12px}.list-inline>li{display:inline-block;padding-right:5px;padding-left:5px}.songlistContainer{margin:0 auto;margin-left: 22px;}.songContainer{height:auto;clear:both;}.songImgContainer{min-height:110px;float:left;}.songImg{width: 150px;height: 150px;border:3px solid #efefef;}.songDetails{width:80%;min-height:110px}.status{width:20%;margin:0 auto;padding:5px;background:#efefef;border-radius:3px;margin-bottom:10px}#MainPlayer{margin:0 auto}
+
+
+
+
+
+
+
+
+
+@font-face {
+  font-family: GothamBold;
+  src: url(GothamBold.ttf);
+}
+
+@font-face {
+  font-family: GothamBook;
+  src: url(GothamBook.ttf);
+}
+
+
+.songTitle {
+	color: white;
+	font-family: 'GothamBook';
+	margin-bottom: 5px;
+	text-align: center;
+	background: none;
+	margin-left: 14px;
+	border: none;
+	margin-top: 10px;
+}
+
+.mobilePrestitial__deeplink, .logo.state-small, .mobilePrestitial__link  {
+	
+	display:none!important;
+	
+}
+
+.mobilePrestitial { display:none!important; }
+
+
+*::-webkit-scrollbar {
+	display:none;
+}
+
+.simdi_caliyor {
+	display:none;
+	position: absolute;
+	top: 0;
+	height: 500px;
+	width: -webkit-fill-available;
+	padding: 0;
+	backdrop-filter: blur(50px);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+#searchBox::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: gainsboro;
+ 
+}
+
+
+.imgSrc {
+	background: url(https://i1.sndcdn.com/artworks-LpsMDGhhMKyU8H0j-pagGbQ-large.jpg);
+	width: 170px;
+	height: 170px;
+	background-size: contain;
+	box-shadow: 0px 0px 14px grey;
+	margin: 0;
+	margin-left: 15px;
+	margin-top: 55px;
+	margin-bottom: 0px;
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+@-webkit-keyframes marquee {
+    0% {text-indent:100%;}
+    100% {text-indent:-10%}
+}
+
+#xcq {
+  -webkit-animation: marquee 5s infinite;
+  -webkit-animation-timing-function: linear;
+  }
