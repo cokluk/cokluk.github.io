@@ -1,0 +1,145 @@
+<head>
+  <title>S4:SQL:CONVERTER</title>
+  <meta name="description" content="A simple ghmattimysql to mysql and mysql to ghmattimysql converter for fivem">
+  <meta name="keywords" content="ghmattimysql, mysql, automatic converter">
+  <meta name="author" content="Ali Salih ÇOKLUK">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <style>
+  
+  body { margin:0; }
+ 
+  .vd { width: 350px; height: 250px; transition: 1.5s }
+  </style>
+</head>
+
+<header class="mdc-top-app-bar">
+  <div class="mdc-top-app-bar__row">
+    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+     
+      <span class="mdc-top-app-bar__title">S4 SQL CONVERTER</span>
+    </section>
+    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+      <a href="https://github.com/cokluk" target="_blank" class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Github"><i class="fab fa-github"></i></a>
+      <a href="https://discord.gg/gZj9gsQR73" target="_blank" class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Discord"><i class="fab fa-discord"></i></a>
+ 
+    </section>
+  </div>
+</header>
+<main class="mdc-top-app-bar--fixed-adjust">
+ 
+<br>
+
+<center>
+<label class="mdc-text-field mdc-text-field--filled mdc-text-field--textarea mdc-text-field--no-label vd">
+  <span class="mdc-text-field__ripple"></span>
+  <span class="mdc-text-field__resizer">
+    <textarea class="mdc-text-field__input"  id="veri" rows="8" cols="40" aria-label="Label"></textarea>
+  </span>
+  <span class="mdc-line-ripple"></span>
+</label>
+<br><br>
+
+<button onclick="GhmattimysqlCevir()" class="mdc-button mdc-button--raised">
+  <span class="mdc-button__label">Ghmattimysql'e çevir</span>
+</button><br class="w" ><br class="w" >
+<button onclick="MysqlCevir()" class="mdc-button mdc-button--raised">
+  <span class="mdc-button__label">Mysql'e çevir (DENEYSEL)</span>
+</button>
+<button class="mdc-button mdc-button--raised action--copy" style="display:none;" data-clipboard-target="#veri" >
+  <span class="mdc-button__label">Kopyala</span>
+</button>
+
+</center></main>
+
+ <div class="mdc-snackbar">
+  <div class="mdc-snackbar__surface" role="status" aria-relevant="additions">
+    <div class="mdc-snackbar__label" aria-atomic="false">
+       
+    </div>
+    <div class="mdc-snackbar__actions" aria-atomic="true">
+      <button type="button" class="mdc-button mdc-snackbar__action">
+        <div class="mdc-button__ripple"></div>
+        <span class="mdc-button__label">Tamam</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js'></script>
+
+<script>
+mdc.autoInit();
+var x = new mdc.snackbar.MDCSnackbar(document.querySelector('.mdc-snackbar'));
+
+
+GhmattimysqlCevir = function() {
+  
+ var veri = $("#veri").val();
+ veri = veri.replaceAll(/mysql.async.execute/gi, "exports.ghmattimysql.execute");
+ veri = veri.replaceAll(/mysql.async.fetchall/gi, "exports.ghmattimysql.execute");
+ veri = veri.replaceAll(/mysql.async.insert/gi, "exports.ghmattimysql.execute");
+ veri = veri.replaceAll(/mysql.sync.fetchall/gi, "exports.ghmattimysql:executeSync");
+ veri = veri.replaceAll(/mysql.sync.fetchscalar/gi, "exports.ghmattimysql:scalarSync");
+ veri = veri.replaceAll(/mysql.async.fetchscalar/gi, "exports.ghmattimysql:scalarSync");
+ veri = veri.replaceAll(/mysql.sync.execute/gi, "exports.ghmattimysql:execute");
+ 
+ $("#veri").val("");
+ $("#veri").val(veri);
+ 
+ $(".vd").css({"width":"90%", "height": "500px", "margin-left":"10px", "margin-right":"10px"});
+ 	
+ $(".w").remove();
+ 
+ $(".mdc-snackbar__label").html("Script ghmattimysql'e çevirildi.");
+ $(".action--copy").css("display","unset");
+ x.open();
+
+}
+
+
+
+MysqlCevir = function() {
+  
+ var veri = $("#veri").val();
+ veri = veri.replaceAll(/exports.ghmattimysql.execute/gi, "mysql.async.execute");
+ veri = veri.replaceAll(/exports.ghmattimysql.execute/gi, "mysql.async.fetchall");
+ veri = veri.replaceAll(/exports.ghmattimysql.execute/gi, "mysql.async.insert");
+ veri = veri.replaceAll(/exports.ghmattimysql:executeSync/gi, "mysql.sync.fetchall");
+ veri = veri.replaceAll(/exports.ghmattimysql:scalarSync/gi, "mysql.sync.fetchscalar");
+ veri = veri.replaceAll(/exports.ghmattimysql:scalarSync/gi, "mysql.async.fetchscalar");
+ veri = veri.replaceAll(/exports.ghmattimysql:execute/gi, "mysql.sync.execute");
+
+/*
+ veri = veri.replaceAll(/exports['ghmattimysql'].execute/gi, "mysql.async.execute");
+ veri = veri.replaceAll(/exports['ghmattimysql'].execute/gi, "mysql.async.fetchall");
+ veri = veri.replaceAll(/exports['ghmattimysql'].execute/gi, "mysql.async.insert");
+ veri = veri.replaceAll(/exports['ghmattimysql']:executeSync/gi, "mysql.sync.fetchall");
+ veri = veri.replaceAll(/exports['ghmattimysql']:scalarSync/gi, "mysql.sync.fetchscalar");
+ veri = veri.replaceAll(/exports['ghmattimysql']:scalarSync/gi, "mysql.async.fetchscalar");
+ veri = veri.replaceAll(/exports['ghmattimysql']:execute/gi, "mysql.sync.execute");
+*/ 
+ 
+ $("#veri").val("");
+ $("#veri").val(veri);
+ $(".action--copy").css("display","unset");
+ $(".mdc-snackbar__label").html("Script Mysql'e çevirildi.");
+ x.open();
+ 
+}
+
+
+const copy = new ClipboardJS(".action--copy");
+copy.on("success", e => {
+ 
+  $(".mdc-snackbar__label").html("Panoya kopyalandı.");
+  x.open();
+  e.clearSelection();
+});
+
+</script>
+
+  
