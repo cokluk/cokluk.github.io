@@ -156,6 +156,9 @@ GhmattimysqlCevir = function() {
  veri = veri.replaceAll(/.Functions.GetVehicles/gi, ".Game.GetVehicles");
  veri = veri.replaceAll(/.Functions.GetPeds/gi, ".Game.GetPeds");
  
+ veri = veri.replaceAll(/PlayerData.items/gi, "inventory");
+ veri = veri.replaceAll(/.Config.Player/gi, ".GetConfig()");
+ 
  veri = veri.replaceAll(/.Functions.GetClosestPed/gi, ".Game.GetClosestPed");
  veri = veri.replaceAll(/.Functions.GetClosestPlayer/gi, ".Game.GetClosestPlayer");
  veri = veri.replaceAll(/.Functions.GetPlayersFromCoords/gi, ".Game.GetPlayersInArea");
