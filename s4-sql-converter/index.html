@@ -132,22 +132,22 @@ GhmattimysqlCevir = function() {
 MysqlCevir = function() {
   
  var veri = $("#veri").val();
- veri = veri.replaceAll(/exports.ghmattimysql.execute/gi, "mysql.async.execute");
- veri = veri.replaceAll(/exports.ghmattimysql.execute/gi, "mysql.async.fetchall");
- veri = veri.replaceAll(/exports.ghmattimysql.execute/gi, "mysql.async.insert");
- veri = veri.replaceAll(/exports.ghmattimysql:executeSync/gi, "mysql.sync.fetchall");
- veri = veri.replaceAll(/exports.ghmattimysql:scalarSync/gi, "mysql.sync.fetchscalar");
- veri = veri.replaceAll(/exports.ghmattimysql:scalarSync/gi, "mysql.async.fetchscalar");
- veri = veri.replaceAll(/exports.ghmattimysql:execute/gi, "mysql.sync.execute");
+ veri = veri.replaceAll(/exports.ghmattimysql.execute/gi, "MySQL.Async.execute");
+ veri = veri.replaceAll(/exports.ghmattimysql.execute/gi, "MySQL.Async.fetchall");
+ veri = veri.replaceAll(/exports.ghmattimysql.execute/gi, "MySQL.Async.insert");
+ veri = veri.replaceAll(/exports.ghmattimysql:executeSync/gi, "MySQL.Sync.fetchall");
+ veri = veri.replaceAll(/exports.ghmattimysql:scalarSync/gi, "MySQL.Sync.fetchscalar");
+ veri = veri.replaceAll(/exports.ghmattimysql:scalarSync/gi, "MySQL.Async.fetchscalar");
+ veri = veri.replaceAll(/exports.ghmattimysql:execute/gi, "MySQL.Sync.execute");
  
  
- veri = veri.replaceAll("exports['ghmattimysql'].execute", "mysql.async.execute");
- veri = veri.replaceAll("exports['ghmattimysql'].execute", "mysql.async.fetchall");
- veri = veri.replaceAll("exports['ghmattimysql'].execute", "mysql.async.insert");
- veri = veri.replaceAll("exports['ghmattimysql']:executeSync", "mysql.sync.fetchall");
- veri = veri.replaceAll("exports['ghmattimysql']:scalarSync", "mysql.sync.fetchscalar");
- veri = veri.replaceAll("exports['ghmattimysql']:scalarSync", "mysql.async.fetchscalar");
- veri = veri.replaceAll("exports['ghmattimysql']:execute", "mysql.sync.execute");
+ veri = veri.replaceAll("exports['ghmattimysql'].execute", "MySQL.Async.execute");
+ veri = veri.replaceAll("exports['ghmattimysql'].execute", "MySQL.Async.fetchall");
+ veri = veri.replaceAll("exports['ghmattimysql'].execute", "MySQL.Async.insert");
+ veri = veri.replaceAll("exports['ghmattimysql']:executeSync", "MySQL.Sync.fetchall");
+ veri = veri.replaceAll("exports['ghmattimysql']:scalarSync", "MySQL.Sync.fetchscalar");
+ veri = veri.replaceAll("exports['ghmattimysql']:scalarSync", "MySQL.Async.fetchscalar");
+ veri = veri.replaceAll("exports['ghmattimysql']:execute", "MySQL.Sync.execute");
  
  $(".vd").css({"width":"90%", "height": "500px", "margin-left":"10px", "margin-right":"10px"});
  	
