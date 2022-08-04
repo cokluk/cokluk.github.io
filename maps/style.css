@@ -8,6 +8,11 @@ body,
   z-index: 1;
   background-color: #143c6a;
 }
+
+body {
+ overflow: hidden;
+}
+
 .btn {
   position: absolute;
   z-index: 10;
